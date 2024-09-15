@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo1.controllers.AppointmentController">
+    <TableView fx:id="appointmentTable" layoutX="15.0" layoutY="56.0" prefHeight="400.0" prefWidth="772.0">
+        <columns>
+            <TableColumn fx:id="columnId" text="ID" />
+            <TableColumn fx:id="columnDateTime" prefWidth="147.0" text="Date Time" />
+            <TableColumn fx:id="columnReason" prefWidth="254.0" text="Reason" />
+            <TableColumn fx:id="columnStatus" prefWidth="89.0" text="Status" />
+            <TableColumn fx:id="columnPatientId" prefWidth="101.0" text="Patient ID" />
+            <TableColumn fx:id="columnDoctorId" prefWidth="100.0" text="Doctor ID" />
+        </columns>
+    </TableView>
+    <Button fx:id="addButton" layoutX="170.0" layoutY="468.0" onAction="#addAppointment" text="Add Appointment" />
+    <Button fx:id="editButton" layoutX="317.0" layoutY="468.0" onAction="#editAppointment" text="Edit Appointment" />
+    <Button fx:id="deleteButton" layoutX="463.0" layoutY="468.0" onAction="#deleteAppointment" text="Delete Appointment" />
+</AnchorPane>

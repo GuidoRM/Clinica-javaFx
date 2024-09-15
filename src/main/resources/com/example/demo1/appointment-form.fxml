@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.demo1.controllers.AppointmentFormController" spacing="10" alignment="CENTER">
+    <Label text="Add New Appointment" />
+    <ComboBox fx:id="patientComboBox" prefWidth="200.0" />
+    <ComboBox fx:id="doctorComboBox" prefWidth="200.0" />
+    <TextField fx:id="reasonField" promptText="Reason" />
+    <TextField fx:id="statusField" promptText="Status" />
+    <TextField fx:id="dateTimeField" promptText="Date and Time (YYYY-MM-DD HH:MM:SS)" />
+
+    <Button text="Save" onAction="#saveAppointment" />
+</VBox>

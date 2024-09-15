@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo1.controllers.PatientController">
+    <!-- Tabla para mostrar los pacientes -->
+    <TableView fx:id="patientTable" prefWidth="600">
+        <columns>
+            <TableColumn fx:id="columnId" text="ID" prefWidth="50"/>
+            <TableColumn fx:id="columnFullName" text="Nombre Completo" prefWidth="150"/>
+            <TableColumn fx:id="columnBirthDate" text="Fecha de Nacimiento" prefWidth="100"/>
+            <TableColumn fx:id="columnGender" text="Género" prefWidth="50"/>
+            <TableColumn fx:id="columnAddress" text="Dirección" prefWidth="200"/>
+            <TableColumn fx:id="columnPhoneNumber" text="Teléfono" prefWidth="100"/>
+            <TableColumn fx:id="columnBloodType" text="Tipo de Sangre" prefWidth="50"/>
+            <TableColumn fx:id="columnInsuranceNumber" text="Número de Seguro" prefWidth="100"/>
+        </columns>
+    </TableView>
+
+
+    <!-- Label y campo de entrada para ingresar el ID del paciente -->
+    <Label text="Ingresar ID de un paciente mayor de 18 años para obtener sus recetas:"/>
+    <TextField fx:id="patientIdInput"/>
+
+    <!-- Botón para ejecutar la consulta -->
+    <Button text="Obtener Recetas" onAction="#getPrescriptionCount"/>
+
+    <!-- Label para mostrar el número de recetas -->
+    <Label fx:id="prescriptionCountLabel" text="Cantidad de recetas: "/>
+
+    <!-- Tabla para mostrar los detalles de las recetas -->
+    <TableView fx:id="prescriptionTable">
+        <columns>
+            <TableColumn fx:id="prescriptionIdColumn" text="ID Receta"/>
+            <TableColumn fx:id="creationDateColumn" text="Fecha de Creación"/>
+            <TableColumn fx:id="dosageColumn" text="Dosis"/>
+            <TableColumn fx:id="frequencyColumn" text="Frecuencia"/>
+            <TableColumn fx:id="treatmentDurationColumn" text="Duración del Tratamiento"/>
+            <TableColumn fx:id="medicationNameColumn" text="Nombre del Medicamento"/>
+        </columns>
+    </TableView>
+</VBox>
